@@ -36,6 +36,7 @@ label {
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: 5px;
+    color: #f0f2f5;
 }
 
 .textarea-field {
