@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# Experimental Validation Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="1366" alt="Screenshot 2024-07-30 at 10 25 58 AM" src="https://github.com/user-attachments/assets/ae3717da-3d2e-468f-be2e-8e55dec6ba8c">
+<img width="1388" alt="Screenshot 2024-07-30 at 10 26 18 AM" src="https://github.com/user-attachments/assets/434a0bad-376f-4032-893d-9fccbfc0564b">
 
-## Available Scripts
+## Overview
+This project provides a web-based application for validating experimental designs. It includes a frontend developed with React and a backend developed with Flask, which integrates with OpenAI's API to assess experimental parameters. The application helps researchers validate their experimental designs by inputting key parameters and receiving feedback on their setup.
 
-In the project directory, you can run:
+## Key Features
+### Frontend Interface
 
-### `npm start`
+* A user-friendly React application for inputting experimental parameters.
+* Provides a clean and intuitive form for hypothesis, sample size, variables, and API key.
+* Displays results of the validation process.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Backend Validation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* A Flask API that communicates with OpenAI's API to validate experimental designs.
+* Handles requests to validate parameters and return feedback.
 
-### `npm test`
+## Technologies Used
+* Frontend: React, MUI (Material-UI)
+* Backend: Flask, OpenAI API
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation and Setup
 
-### `npm run build`
+### Backend
+1. Clone the Backend Repository
+```
+git clone https://github.com/carmmmm/experimentValidation_backend.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+2. Navigate to the Backend Directory
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+cd experimental-validation-backend
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install Dependencies
 
-### `npm run eject`
+```
+pip install -r requirements.txt
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Run the Backend Application
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+python app.py
+```
+This will start the Flask server. The API will be accessible at http://127.0.0.1:5000.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Frontend
+1. Clone the Frontend Repository
+```
+git clone https://github.com/carmmmm/experimentalValidator_frontend.git
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Navigate to the Frontend Directory
+```
+cd experimentValidator_frontend
+```
 
-## Learn More
+3. Install Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Run the Frontend Application
 
-### Code Splitting
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This will start the React development server. The application will be accessible at http://localhost:3000. 
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Accessing the Application
+1. Open Your Web Browser
+2. Navigate to http://localhost:3000 to access the frontend application.
+3. On the home page, click the "Access the Assessment Tool" button to navigate to the experiment form.
+   <img width="1366" alt="Screenshot 2024-07-30 at 10 25 58 AM" src="https://github.com/user-attachments/assets/7b838b55-1ae8-479c-b41b-f56aa7862f80">
 
-### Making a Progressive Web App
+5. Fill out the form with the following parameters:
+* Hypothesis: Describe your hypothesis for the experiment.
+* Sample Size: Provide the sample size for the experiment.
+* Variables: List the variables involved in the experiment.
+* OpenAI API Key: Enter your OpenAI API key to use the backend validation service.
+<img width="1388" alt="Screenshot 2024-07-30 at 10 26 18 AM" src="https://github.com/user-attachments/assets/434a0bad-376f-4032-893d-9fccbfc0564b">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. Submit the Form
+6. Review the feedback displayed on the page to assess the validity of your experimental design.
+   <img width="1379" alt="Screenshot 2024-07-30 at 10 26 37 AM" src="https://github.com/user-attachments/assets/8df2c900-f38b-4611-9f8a-303564946767">
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Example
+Form Input:
 
-### Deployment
+* Hypothesis: "Increasing temperature will increase reaction rate."
+* Sample Size: "50"
+* Variables: "Temperature, Reaction Rate"
+* OpenAI API Key: "YOUR_OPENAI_API_KEY"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Troubleshooting
+* Ensure both the frontend and backend servers are running.
+* Check the browser console and terminal for any errors.
+* Verify that the OpenAI API key is correct and has sufficient quota.
